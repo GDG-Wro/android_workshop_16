@@ -8,6 +8,7 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:7.0.0-alpha02"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.vanniktech:gradle-android-junit-jacoco-plugin:0.16.0"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -17,6 +18,8 @@ plugins {
     id 'com.github.ben-manes.versions' version '0.36.0'
     id 'io.gitlab.arturbosch.detekt' version '1.14.2'
 }
+
+apply plugin: "com.vanniktech.android.junit.jacoco"
 
 dependencies {
     detekt "io.gitlab.arturbosch.detekt:detekt-cli:1.14.2"
